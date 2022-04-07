@@ -1,35 +1,29 @@
-const main = () => {
-    const searchElement = document.querySelector("#searchElement");
-    const buttonSearchElement = document.querySelector("#searchButtonElement");
-    const movieListElement = document.querySelector("#movieList");
+import "../component/movie-list.js";
+import "../component/search-bar.js";
+import DataSource from "../data/data-source.js";
 
-    const onButtonSearchClicked = () => {
-        const dataSource = new DataSource(renderResult, fallbackResult);
-        dataSource.searchMovie(searchElement.value);
+const main = () => {
+    const searchElement = document.querySelector("search-bar");
+    const movieListElement = document.querySelector("movie-list");
+
+    const onButtonSearchClicked = async () => {
+        try {
+            const result = await DataSource.searchMovie(searchElement.value);
+            renderResult(result);
+        } catch (message) {
+            fallbackResult(message)
+        }
     };
 
     const renderResult = results => {
-        movieListElement.innerHTML = "";
-        results.forEach(function (movie) {
-            const {name, fanArt, description} = movie;
-
-            const movieElement = document.createElement("div");
-            movieElement.setAttribute("class", "movie");
-
-            movieElement.innerHTML = `
-                <img class="fan-art-movie" src="${fanArt}" alt="Fan Art">
-                <div class="movie-info">
-                <h2>${name}</h2>
-                <p>${description}</p>
-                </div>`;
-            movieListElement.appendChild(movieElement);
-        })
+        movieListElement.movies = results;
     };
 
     const fallbackResult = message => {
-        movieListElement.innerHTML = "";
-        movieListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`;
+        movieListElement.renderError(message);
     };
 
-    buttonSearchElement.addEventListener("click", onButtonSearchClicked);
+    searchElement.clickEvent = onButtonSearchClicked;
 };
+
+export default main;

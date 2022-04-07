@@ -8,20 +8,17 @@
 </head>
 <body>
 <header>
-    <div id="appBar" class="app-bar">
-        <h2>Chadash Movie <i>XXI</i></h2>
-    </div>
+    <!-- Custom Element -->
+    <app-bar></app-bar>
 </header>
 <main>
-    <div id="search-container" class="search-container">
-        <input placeholder="Search movie film" id="searchElement" type="search">
-        <button id="searchButtonElement" type="submit">Search</button>
-    </div>
-    <div id="movieList"></div>
+    <!-- Custom Element -->
+    <search-bar></search-bar>
+
+    <!-- Custom Element -->
+    <movie-list></movie-list>
 </main>
-<script src="src/script/data/movies.js"></script>
-<script src="src/script/data/data-source.js"></script>
-<script src="src/script/view/main.js"></script>
-<script src="app.js"></script>
+
+<script src="app.js" type="module"></script>
 </body>
 </html>
