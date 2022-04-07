@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Permanent+Marker&family=Quicksand:wght@400;700&family=Varela+Round&display=swap');
+/* Font Acme, Quicksand, Varela Round, Permanent Marker, sans-serif */
+
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +8,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Quicksand', cursive;
 }
 
 main {

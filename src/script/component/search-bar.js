@@ -37,7 +37,9 @@ class SearchBar extends HTMLElement{
                 padding: 16px;
                 border: 0;
                 border-bottom: 1px solid rgb(37, 95, 129);
-                font-weight: bold;
+                font-size: 17px;
+                font-weight: lighter;
+                font-family: 'Varela Round', sans-serif;
             }
             
             .search-container > input:focus {
@@ -63,6 +65,14 @@ class SearchBar extends HTMLElement{
                 color: white;
                 border: 0;
                 text-transform: uppercase;
+                border-radius: 6px;
+            }
+
+            .search-container > button:hover {
+                font-size: 16px;
+                font-weight: lighter;
+                box-shadow: 0 1px 10px 0 rgba(136, 136, 136, 0.734);
+                transition: all .1s ease-in;
             }
             
             @media screen and (max-width: 550px){
