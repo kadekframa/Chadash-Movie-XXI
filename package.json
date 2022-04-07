@@ -1,0 +1,35 @@
+{
+  "name": "sib_chadashmovie",
+  "version": "1.0.0",
+  "description": "Website App that provie information about popular movie for society",
+  "main": "app.js",
+  "scripts": {
+    "start-dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadekframa/Chadash-Movie-XXI.git"
+  },
+  "author": "Kadek Frama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kadekframa/Chadash-Movie-XXI/issues"
+  },
+  "homepage": "https://github.com/kadekframa/Chadash-Movie-XXI#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "regenerator-runtime": "^0.13.9"
+  }
+}
