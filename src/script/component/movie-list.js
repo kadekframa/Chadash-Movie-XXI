@@ -1,9 +1,5 @@
 import "./movie-item.js";
 
-class Semangat{
-
-}
-
 class MovieList extends HTMLElement{
     constructor(){
         super();
